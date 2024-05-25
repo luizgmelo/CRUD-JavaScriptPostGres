@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "pg": "^8.11.5"
+  },
+  "name": "crud-javascriptpostgresql",
+  "description": "CRUD (Create, Read, Update and Delete) CLI Aplicattion made in JavaScript + PostgreSQL",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/luizgmelo/CRUD-JavascriptPostgreSQL.git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "luizgmelo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luizgmelo/CRUD-JavascriptPostgreSQL/issues"
+  },
+  "homepage": "https://github.com/luizgmelo/CRUD-JavascriptPostgreSQL#readme"
+}
