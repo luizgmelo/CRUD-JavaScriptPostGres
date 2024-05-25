@@ -6,8 +6,7 @@
   "description": "CRUD (Create, Read, Update and Delete) CLI Aplicattion made in JavaScript + PostgreSQL",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "module",
-  "devDependencies": {},
+  "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
