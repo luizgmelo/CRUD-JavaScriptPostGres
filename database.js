@@ -1,20 +1,24 @@
 const { Client } = require("pg");
+const readline = require("readline");
 
 const client = new Client({
   host: "localhost",
   user: "postgres",
   port: 5432,
-  password: "rootUser",
+  password: "123",
   database: "postgres"
 });
 
 client.connect();
 
-client.query(`Select * from users`, (res, err) => {
-  if (!err) {
-    console.log(res.rows);
-  } else {
-    console.log(err.messages);
-  }
-  
-})
+module.exports = {
+  list:function() {
+    client.query(`Select * from books`, (err, res) => {
+      if (!err) {
+        console.log(res["rows"]);
+      } else {
+        console.log(err);
+      }
+    })
+  },
+};

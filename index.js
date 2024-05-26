@@ -1,4 +1,5 @@
-import * as readline from "readline";
+const readline = require("readline");
+const client = require("./database.js");
 
 console.log("=".repeat(10), "Welcome to my library", "=".repeat(10));
 console.log("Menu Options");
@@ -6,7 +7,6 @@ console.log("1. Add a new book");
 console.log("2. List books");
 console.log("3. Update a book");
 console.log("4. Delete a book");
-console.log("Your option:");
 
 const option = readline.createInterface({
   input: process.stdin,
@@ -17,10 +17,11 @@ option.question("Your option:", opt => {
 
   switch (opt) {
     case "1":
-      console.log("adding a new book");
+      client.create();
       break;
     case "2":
       console.log("listing all books");
+      client.list();
       break;
     case "3":
       console.log("updating a book");
