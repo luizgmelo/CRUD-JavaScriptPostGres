@@ -12,17 +12,18 @@ let opt = prompt("Your option:")
 
 switch (opt) {
   case "1":
-    let bookName = prompt("Type the name of the book: ");
-    client.create(bookName);
+    client.create(prompt("Type the name of the book: "));
     break;
   case "2":
     client.list();
     break;
   case "3":
-    console.log("updating a book");
+    let oldBookName = prompt("Enter the old name of the book:");
+    let newBookName = prompt("Enter the new name of the book:");
+    client.update(oldBookName, newBookName);
     break;
   case "4":
-    console.log("deleting a book");
+    client.delete(prompt("Type the name of the book: "));
     break;
   default:
     console.log("Invalid Option");
