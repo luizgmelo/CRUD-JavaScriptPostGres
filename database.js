@@ -39,5 +39,14 @@ module.exports = {
       }
     })
   },
+  delete:function(bookName) {
+    client.query(`DELETE FROM books WHERE name = '${bookName}'`, (err, res) => {
+      if (!err) {
+        console.log("Remove has sucessfully");
+      } else {
+        console.log(err);
+      }
+    })
+  }
  };
 
