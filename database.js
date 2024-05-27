@@ -1,5 +1,5 @@
 const { Client } = require("pg");
-const readline = require("readline");
+const option = require("./index");
 
 const client = new Client({
   host: "localhost",
@@ -21,4 +21,14 @@ module.exports = {
       }
     })
   },
-};
+  create:function(bookName) {
+    client.query(`INSERT INTO books (name) values ('${bookName}')`, (err, res) => {
+      if (!err) {
+        console.log("Livro adicionado com sucesso!");
+      } else {
+        console.log(err);
+      }
+    })
+  },
+ };
+
